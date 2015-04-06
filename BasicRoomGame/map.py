@@ -28,9 +28,6 @@ def new_room(clues_number):
 	file_name = 'room_n'+str(new_number)
 	pickle.dump(room,open(file_name,'wb'))
 
-	print(room)
-
-
 def get_room_number():
 	number = pickle.load(open('number_of_rooms','rb'))
 	return(int(number))
@@ -63,4 +60,4 @@ def clean_room():
 	pickle.dump('0',open('number_of_rooms','wb'))
 
 clean_room()
-new_room(5)
+
